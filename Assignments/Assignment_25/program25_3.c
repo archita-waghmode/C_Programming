@@ -1,0 +1,51 @@
+/*
+    input : 0 - 9
+    output : true
+
+    input : &
+    output : false
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<stdbool.h>
+
+typedef int BOOL;
+
+#define TRUE 1
+#define FALSE 0
+
+BOOL ChkDigit(char ch)
+{
+    if((ch >= '0' && ch <= '9'))
+    {
+        return TRUE;
+    }
+    else 
+    {
+        return FALSE;
+    }
+}
+
+int main()
+{
+    char cValue = '\0';
+    BOOL bRet = FALSE;
+
+    printf("Enter the character:\n");
+    scanf("%c", &cValue);
+
+    bRet = ChkDigit(cValue);
+
+    if(bRet == TRUE)
+    {
+        printf("TRUE\n");
+    }
+    else
+    {
+        printf("FALSE\n");
+    }
+
+
+    return EXIT_SUCCESS;
+}
