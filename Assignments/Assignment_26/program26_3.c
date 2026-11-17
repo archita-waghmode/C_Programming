@@ -1,0 +1,49 @@
+/*
+    input : A
+    output : a
+
+    input : a
+    output : A
+
+    input : 4
+    output : 4
+
+    input : %
+    output : %
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+void Display(char ch)
+{
+        char ch1 = '\0';
+
+        if(ch >= 'A' && ch <='Z')
+        {
+            for(ch1 = ch; ch1 <= 'Z'; ch1++)
+            {
+                printf("%c\t",ch1);
+            }
+        }
+        else if(ch >= 'a' && ch <='z')
+        {
+            for(ch1 = ch; ch1 >= 'a'; ch1--)
+            {
+                printf("%c\t",ch1);
+            }
+        }
+
+}
+int main()
+{
+    char cValue = '\0';
+
+    printf("Enter character\n");
+    scanf("%c", &cValue);
+
+    Display(cValue);
+
+    
+
+    return EXIT_SUCCESS;
+}
